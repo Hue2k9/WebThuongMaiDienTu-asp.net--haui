@@ -12,12 +12,12 @@
            <%
                string name = Request["name"];
                string password = Request["password"];
-               CheckBoxList chkHobbies = (CheckBoxList)PreviousPage.FindControl("hobbies");
                string level = Request["level"];
                string gpa = Request["gpa"];
                string major = Request["major"];
-               string hobbies = "";
 
+               CheckBoxList chkHobbies = (CheckBoxList)PreviousPage.FindControl("hobbies");
+               string hobbies = "";
                foreach (ListItem myItem in chkHobbies.Items)
                {
                    if (myItem.Selected)

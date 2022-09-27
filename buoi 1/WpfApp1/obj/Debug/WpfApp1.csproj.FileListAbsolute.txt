@@ -1,0 +1,15 @@
+C:\Users\httt2\OneDrive\Documents\haui_ki1_nam3\thuongmaidientu\buoi 1\WpfApp1\bin\Debug\WpfApp1.exe.config
+C:\Users\httt2\OneDrive\Documents\haui_ki1_nam3\thuongmaidientu\buoi 1\WpfApp1\bin\Debug\WpfApp1.exe
+C:\Users\httt2\OneDrive\Documents\haui_ki1_nam3\thuongmaidientu\buoi 1\WpfApp1\bin\Debug\WpfApp1.pdb
+C:\Users\httt2\OneDrive\Documents\haui_ki1_nam3\thuongmaidientu\buoi 1\WpfApp1\obj\Debug\WpfApp1.csproj.AssemblyReference.cache
+C:\Users\httt2\OneDrive\Documents\haui_ki1_nam3\thuongmaidientu\buoi 1\WpfApp1\obj\Debug\MainWindow.g.cs
+C:\Users\httt2\OneDrive\Documents\haui_ki1_nam3\thuongmaidientu\buoi 1\WpfApp1\obj\Debug\App.g.cs
+C:\Users\httt2\OneDrive\Documents\haui_ki1_nam3\thuongmaidientu\buoi 1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\httt2\OneDrive\Documents\haui_ki1_nam3\thuongmaidientu\buoi 1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+C:\Users\httt2\OneDrive\Documents\haui_ki1_nam3\thuongmaidientu\buoi 1\WpfApp1\obj\Debug\MainWindow.baml
+C:\Users\httt2\OneDrive\Documents\haui_ki1_nam3\thuongmaidientu\buoi 1\WpfApp1\obj\Debug\WpfApp1.g.resources
+C:\Users\httt2\OneDrive\Documents\haui_ki1_nam3\thuongmaidientu\buoi 1\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\httt2\OneDrive\Documents\haui_ki1_nam3\thuongmaidientu\buoi 1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache
+C:\Users\httt2\OneDrive\Documents\haui_ki1_nam3\thuongmaidientu\buoi 1\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
+C:\Users\httt2\OneDrive\Documents\haui_ki1_nam3\thuongmaidientu\buoi 1\WpfApp1\obj\Debug\WpfApp1.exe
+C:\Users\httt2\OneDrive\Documents\haui_ki1_nam3\thuongmaidientu\buoi 1\WpfApp1\obj\Debug\WpfApp1.pdb
