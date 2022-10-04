@@ -34,7 +34,13 @@
     </style>
 </head>
 <body>
-    <form id="form1" runat="server" action="xulybai1.aspx">
+    <form id="form1" runat="server">
+        <!--
+            1. RequiredFieldValidator: bắt buộc
+            2. RangeValidator: check số trong khoảng
+            3. RegularExpressionValidator: định dạng kiểu regex
+            4. CompareValidator: so sánh 2 trường text giống nhau không (password)
+            -->
         <div>
            <table >
                <tr>
@@ -52,21 +58,25 @@
                    </td>
                    <td>
                        <asp:TextBox runat="server" ID="tuoi"></asp:TextBox>
-                       <asp:RangeValidator runat="server" ControlToValidate="tuoi" ForeColor="Red" ErrorMessage="Tuoi phai lon hon 1" ID="checktuoi" MinimumValue="1" type="Integer" MaximumValue="100"></asp:RangeValidator>
-                   </td>
+                         <asp:RequiredFieldValidator runat="server" id="rtuoi" ControlToValidate="tuoi" ErrorMessage="Ban phai nhap tuoi" ForeColor="Red"/>
+                       <asp:RangeValidator runat="server" ControlToValidate="tuoi" ForeColor="Red" ErrorMessage=" Tuoi phai lon hon 1 va nho hon 500" ID="checktuoi" MinimumValue="1" type="Integer" MaximumValue="500"></asp:RangeValidator>
+                     
+                 
+                       </td>
                </tr>
 
                 <tr>     
                  <td> <label style="font-weight:bold; margin-top:10px;">Password</label></td>
                    <td><asp:TextBox ID="password" runat="server" type="password"></asp:TextBox>
                        <asp:RequiredFieldValidator runat="server" ID="rpassword" ControlToValidate="password" ErrorMessage="Ban phai nhap mat khau" ForeColor="Red"/>
-                   </td>
+                       <asp:RegularExpressionValidator runat="server" ID="regexpassword" ControlToValidate="password" ValidationExpression="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$" ErrorMessage="Mat khau khong du manh" ForeColor="Red" ></asp:RegularExpressionValidator>
+                       </td>
                </tr>
                <tr>     
                  <td> <label style="font-weight:bold; margin-top:10px;">Password Again</label></td>
-                   <td><asp:TextBox ID="passwordagain" runat="server" type="passwordagain"></asp:TextBox>
-                       <asp:RequiredFieldValidator runat="server" ID="rrepassword" ControlToValidate="passwordagain" ErrorMessage="Ban phai nhap mat khau" ForeColor="Red"/>
-                   <asp:CompareValidator runat="server" ID="checkpassword" ControlToCompare="password" ErrorMessage="Mat khau phai trung khop" ForeColor="Red"></asp:CompareValidator>
+                   <td><asp:TextBox ID="passwordagain" runat="server" type="password"></asp:TextBox>
+                       <asp:RequiredFieldValidator runat="server" ID="rrepassword" ControlToValidate="passwordagain" ErrorMessage="Ban phai nhap lai mat khau" ForeColor="Red"/>
+                   <asp:CompareValidator runat="server" ID="checkpassword" ControlToValidate="passwordagain" ControlToCompare="password" ErrorMessage=" Mat khau phai trung khop" ForeColor="Red"></asp:CompareValidator>
                    </td>
                </tr>
                <tr>
@@ -79,18 +89,17 @@
                <tr>
                    <td> <label> Email</label></td>
                    <td>
-                       <asp:TextBox runat="server" ID="email"></asp:TextBox>
+                       <asp:TextBox runat="server" ID="email" AutoCompleteType="Email"></asp:TextBox>
                        <asp:RequiredFieldValidator runat="server" ControlToValidate="email" ID="remail" ErrorMessage="Ban phai nhap email" ForeColor="Red"></asp:RequiredFieldValidator>
-                       <asp:RegularExpressionValidator id="regexemail" runat="server" ControlToValidate="email" ErrorMessage="Ban phai nhap email dung dinh dang"
-                           ForeColor="Red"></asp:RegularExpressionValidator>
+                       <asp:RegularExpressionValidator id="regexemail" runat="server" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ControlToValidate="email"  ErrorMessage="Ban phai nhap email dung dinh dang"
+                           ForeColor="Red" ></asp:RegularExpressionValidator>
                        </td>
                </tr>
-
+               <!--
                      <tr>
                    <td> <label style="font-weight:bold;">Hobbies</label></td>    
                       <td>
                            <asp:CheckBoxList id="hobbies" runat="server" >
-               
                             <asp:ListItem Value="surfing" name="surfing">Surfing</asp:ListItem>
                            <asp:ListItem Value="running" name="running">Running</asp:ListItem>
                            <asp:ListItem Value="biking" name="biking">Biking</asp:ListItem>
@@ -99,6 +108,7 @@
                          
                       </td>
                </tr>
+               
                      <tr>
                    <td> <label style="font-weight:bold;">Level</label></td>
                    <td>
@@ -112,6 +122,7 @@
                       
                    </td>
                </tr>
+                   
                 <tr>
                    <td> <label style="font-weight:bold;">GPA</label></td>
                    <td>
@@ -126,7 +137,8 @@
                    </td>
                    
                </tr>
-
+                   -->
+               <!--
                   <tr>
                       <td> <label style="font-weight:bold;">Majors</label></td>
                       <td>
@@ -139,6 +151,7 @@
                        
                       </td>
                   </tr>
+               -->
 
                <tr>
                    <td></td>

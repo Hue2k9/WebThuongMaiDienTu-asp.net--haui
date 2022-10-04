@@ -15,9 +15,13 @@
                string level = Request["level"];
                string gpa = Request["gpa"];
                string major = Request["major"];
-
-               CheckBoxList chkHobbies = (CheckBoxList)PreviousPage.FindControl("hobbies");
+               string passordAgain = Request["passwordagain"];
+               string phoneNumber = Request["phone"];
+               string email = Request["email"];
+               string age = Request["tuoi"];
+               //      CheckBoxList chkHobbies = (CheckBoxList)PreviousPage.FindControl("hobbies");
                string hobbies = "";
+               /*
                foreach (ListItem myItem in chkHobbies.Items)
                {
                    if (myItem.Selected)
@@ -26,16 +30,17 @@
                    }
                   
                }
-           
+           */
            %>
 
             <ul>
                <li>Name:  <%= name %></li>
+                 <li>Age:  <%= age%> </li>
                 <li>Password:  <%= password%> </li>
-                <li>Hobbies:  <%= hobbies%> </li>
-                <li>Level:  <%= level%> </li>
-                <li>GPA:  <%= gpa%> </li>
-                <li>Majors:  <%= major%> </li>
+                 <li>Password again:  <%= passordAgain %></li>
+                <li>Phone number:  <%= phoneNumber%> </li>
+                 <li>email:  <%= email %></li>
+               
             </ul>
         </div>
     </form>
