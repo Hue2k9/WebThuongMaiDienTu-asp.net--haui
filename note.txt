@@ -1,0 +1,68 @@
+DESKTOP-N8SDIRR\SQLEXPRESS
+
+1. Trước khi xóa người dùng hỏi chắc chắn xóa không?
+- edit column -> CommanField -> Convert this field 
+into a TemplateField.
+- Thêm: OnClientClick="return confirm('Ban co chac chan muon xoa khong?')"
+<asp:LinkButton ID="LinkButton3" runat="server" 
+CausesValidation="False" CommandName="Delete" Text="Delete" 
+OnClientClick="return confirm('Ban co chac chan muon xoa khong?')"></asp:LinkButton>
+
+2. Thêm người dùng (ThemSinhVien.aspx)
+- Thêm label để hiển thị thông báo lỗi:
+<asp:label ID="errmsg" runat="server" ForeColor="Red"></asp:label>
+- Để hiển thị chế độ insert:
++ Thêm DefaultMode="Insert" ở FormView
+- Xử lý lỗi khi nhập sinh viên:
+  protected void InsertedCmd(object sender, FormViewInsertedEventArgs e)
+        {
+            if (e.Exception != null)
+            {
+                e.KeepInInsertMode = true;
+                e.ExceptionHandled = true;
+                errmsg.Text = "Co loi xay ra: " + e.Exception.Message;
+
+            }
+            else
+            {
+                errmsg.Text = "";
+            }
+        }
+
+- Thay mã lớp là hộp DropDown
++ connect database mới
++ edit -> selectedValue => Bound to => Malop
+
+3. Sửa thông tin sinh viên
+- FormView
+- DefaultMode: edit
+
+4. Xóa bớt các đường link để lại link delete
+-  <asp:TemplateField HeaderText="Delete">
+- Thêm vào column:
+  <asp:HyperLinkField DataNavigateUrlFields="masv" 
+DataNavigateUrlFormatString="SuaSinhVien.aspx?masv={0}" 
+Text="Edit" HeaderText="Edit"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
