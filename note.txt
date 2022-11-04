@@ -44,8 +44,21 @@ OnClientClick="return confirm('Ban co chac chan muon xoa khong?')"></asp:LinkBut
 DataNavigateUrlFormatString="SuaSinhVien.aspx?masv={0}" 
 Text="Edit" HeaderText="Edit"/>
 
+- Tại File sửa:
+<asp:SqlDataSource SelectCommand="SELECT * FROM [sinhvien] where [masv]=@masv"
++ Them:
+  <SelectParameters>
+               <asp:QueryStringParameter Name="masv" Type="Int32" QueryStringField="masv"/>
+           </SelectParameters>
 
 
+
+
+<appSettings>
+<add key="ValidationSettings:UnobtrusiveValidationMode" value="None" />
+</appSettings>
+
+- regex dienthoai: \d{10}
 
 
 
